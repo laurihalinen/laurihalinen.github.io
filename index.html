@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lauri Halinen – Synerra</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <span class="logo">Lauri Halinen</span>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero">
+
+      <h1>Synerra</h1>
+      <p>
+        A social web-application that connects gamers together.
+      </p>
+      <div class="actions">
+        <a class="btn" href="https://d2lqv34okdzcq4.cloudfront.net/login" target="_blank" rel="noopener">
+          Live Demo
+        </a>
+
+        <a class="btn secondary" href="https://github.com/jamktiko/Synerra" target="_blank" rel="noopener">
+          Source Code
+        </a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2>Sovelluksen idea</h2>
+      <p>
+        Sovelluksen ideana on tarjota pelaajille alusta, joissa he voivat etsiä itselleen sopivaa peliseuraa kattavasti
+        erilaisten filttereiden avulla.
+      </p>
+    </section>
+
+
+
+    <section class="section">
+      <h2>Oma rooli</h2>
+
+      <ul>
+        <li>
+          <strong>Backend-arkkitehtuuri</strong><br />
+          Vastasin serverless-pilviarkkitehtuurin suunnittelusta ja toteutuksesta Serverless-frameworkilla,
+          johon kuului Lambda-funktiot, API Gateway-reitit, Cognito-kirjautuminen ja frontendin hostaus S3 bucketista ja
+          jakelu CloudFrontilla.
+        </li>
+        <p>Alla suunnittelemani pilviarkkitehtuuri:</p>
+        <img src="assets/synerra_cloud.jpg" alt="Synerra-pilviarkkitehtuuri" style="max-width:100%;height:auto;">
+
+        <li>
+          <strong>Tietokannan suunnittelu</strong><br />
+          Suunnittelin ja toteutin DynamoDB tietokannan käyttäen single-table-designia
+          sekä GSI-indeksejä sovelluksen tarpeiden mukaisesti.
+        </li>
+
+        <li>
+          <strong>Frontend–backend-integraatio</strong><br />
+          Backendin valmistuttua vastasin suurimmaksi osaksi frontendin ja backendin
+          yhdistämisestä Angular-sovelluksessa.
+        </li>
+
+        <li>
+          <strong>Product Owner-rooli</strong><br />
+          Toimin projektissa Product Ownerina vastaten backlogista, tehtävien priorisoinnista
+          sekä GitHub Projectsin käytöstä sprinttityöskentelyssä.
+        </li>
+      </ul>
+    </section>
+
+
+    <section class="section">
+      <h2>Käytetyt teknologiat:</h2>
+      <ul>
+        <li> <strong>Frontend: </strong> Angular, TypeScript</li>
+        <li><strong>IaC: </strong> Serverless framework</li>
+        <li><strong>AWS: </strong> Lambda, API-Gateway, DynamoDb, Cognito, S3, Cloudfront</li>
+      </ul>
+    </section>
+    <section class="section">
+      <h2>Osaamisen kehittyminen TC:ssä</h2>
+      <p>
+        Projektin alkuvaiheessa koin, että olin saanut aiemmilta kursseilta hyvin osaamista monilta eri osa-alueilta
+        (frontend, backend, AWS). Osaamista ei kuitenkaan ollut varsinaisesti päässyt aiemmilla kursseilla testaamaan
+        muuten
+        kuin lopputöiden muodossa, jotka eivät olleet kovin laajoja. Siksi lähdinkin Ticorporateen innokkaasti
+        testaamaan omaa osaamistani osana suurempaa sovelluskokonaisuutta ja oppimaan uutta. Suurimpana tavoitteenani
+        oli kerätä
+        itseluottamusta omista taidoistani, sillä vaikka hyvä perustason osaaminen löytyi jo ennestään en ollut kovin
+        varma omista taidoistani isommassa projektissa, kun ei niitä ollut päässyt testaamaan varsinaisesti käytännössä.
+      </p>
+      <p>
+        TC:n aikana osaamiseni kehittyi erityisesti backend-arkkitehtuurin suunnittelussa ja toteutuksessa
+        serverless-ympäristössä, sekä frontendin ja backendin integraatiossa Angular-sovelluksessa. Opin käyttämään
+        AWS:n palveluita kuten Lambda, API Gateway, DynamoDB ja Cognito osana toimivaa kokonaisuutta, ja ymmärsin
+        paremmin Infrastructure as Code-periaatteen hyödyt. Lisäksi Product Ownerin rooli opetti projektinhallintaa,
+        priorisointia ja backlogien tehokasta hallintaa. Kokonaisuutena TC vahvisti itseluottamustani teknisten
+        päätösten tekemisessä ja antoi konkreettisia kokemuksia laajemmista sovellusprojekteista.
+      </p>
+      <p>Projektin aikana opin myös tunnistamaan omia vahvuuksiani, sekä osa-alueita, jotka kaipaavat vielä kehitystä.
+        Tunnistin, että vahvuuteni oli enemmän backend-puolella vs. frontend, vaikka aikaisemmin olin kokenut
+        frontend-kehityksen mieluisammaksi.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Opitut asiat ja oivallukset</h2>
+
+      <ul>
+        <li>
+          <strong>Serverless-backendin kokonaisvaltainen toteuttaminen</strong><br />
+          Lambda-funktiot olivat minulle jo ennestään tuttuja, mutta TC:n aikana opin käyttämään niitä osana laajempaa
+          sovelluskokonaisuutta, jossa funktiot hallitsivat sovelluksen toiminnallisuuksia yhteydessä muiden
+          AWS:n palveluiden kanssa.
+        </li>
+        <li><strong>Serverless-backendin hyödyt ja haitat</strong><br>
+          Projektin aikana tuli hyvin selväksi mitkä ovat palvelittoman backendin hyödyt ja haitat. Sovelluskehitys oli
+          helpompaa, kun ei tarvinnut ylläpitää palvelimia ja infrastruktuuri skaalautui aina käytön mukaan.
+          Serverless-toteutus oli myös hyvin kustannustehokas, kun kulutkin muodostuvat käytön mukaan. Tilanhallinta oli
+          kuitenkin sovelluksessa haastavaa serverless-mallilla, koska Lambda-funktiot eivät voi ylläpitää tilaa, kuten
+          käyttäjien online-statusta, mikä vaati lopulta toisen WebSocket-yhteyden lisäämisen.</li>
+        <li>
+          <strong>Infrastructure as Code</strong><br />
+          Projektin aikana käytin paljon Serverless frameworkkia, joka tukee IaC-periaatetta, joten sen osalta tuli
+          paljon oppia. Erityisesti projektin aikana opin tunnistamaan IaC:n hyödyt. Suurimmat hyödyt meidän
+          projektissamme olivat, että saimme infrastruktuurin osaksi versionhallintaa, helppo muokattavuus ja koodin
+          toistettavuus.
+        </li>
+
+        <li>
+          <strong>DynamoDB:n käyttö</strong><br />
+          DynamoDB oli minulle aiemmin melko vieras, mutta projektin aikana opin käyttämään AWS:n suosittelemaa
+          "single-table"-designia, indeksointia (GSI:t) ja tekemään monimutkaisempiakin kyselyitä.
+        </li>
+
+        <li>
+          <strong>Käyttäjähallinta Cognitolla</strong><br />
+          Opin hyödyntämään AWS Cognitoa käyttäjien autentikointiin ja autorisointiin sekä ymmärtämään sen roolin osana
+          koko backend-arkkitehtuuria. Lisäksi opin yhdistämään Cogniton
+          Google-autentikointiin.
+        </li>
+        <li>
+          <strong>Product Ownerin rooli</strong><br />
+          Product Ownerin rooli oli itselle aika vieras käsite ennen TC:tä, mutta TC:n aikana opin paljon projektin
+          hallinnasta PO:n roolissa. Alkuun PO:n hommat olivat vähän hakemista, mutta projektin edetessä kehityin myös
+          PO:n roolissa. Alkuun taskit olivat liian laajoja ja backlogit suppeita. Loppua kohti kuitenkin opin
+          käyttämään GitHub projectsin eri työkaluja paremmin (subtaskit, task-listit, taskien assignaaminen,
+          milestonet). Näin jälkikäteen ajateltuna olisin käyttänyt PO:n rooliin hieman enemmän aikaa, jotta
+          projektinhallinta olisi ollut kokonaisuutena paremmalla tasolla.
+        </li>
+
+        <li>
+          <strong>Oman itsevarmuuden kehittyminen</strong><br />
+          TC-projekti osoitti, että aiemmilta kursseilta saatu osaaminen riitti pohjaksi laajemmalle kokonaisuudelle,
+          ja itseluottamus teknisten päätösten tekemiseen kasvoi merkittävästi projektin edetessä. Oli myös hienoa
+          huomata, että alussa suunnittelemani pilviarkkitehtuuri toimi ja tuki sovelluksen tavoitteita ilman suurempia
+          muutoksia.
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Code snippets</h2>
+      <p>Valitsin nämä koodipätkät portfolioon, koska ne korostavat hyvin omaa työn kuvaani projektissa. Halusin myös
+        esitellä osaamistani eri osa-alueilta, mutta korostaa backendiä osa-alueena, koska sen parissa tein eniten
+        hommia. Otin portfolioon juuri nämä koodipätkät, koska ne ovat tärkeitä sovelluksen ydinlogiikalle. Lisäksi
+        valikoin muutaman koodipätkän sen perusteella, että ne olivat minulle uusia, hieman haastaviakin asioita ja opin
+        niistä.
+      </p>
+      <p>Koodipätkissä on karsittu ylimääräistä koodia pois esittämisen selkeyttämiseksi.</p>
+
+      <details class="snippet">
+        <summary>Viestien tallennus logiikka</summary>
+        <p>Tässä koodiesimerkissä viestien tallennus single-table-design tietokantaan, joka tapahtuu aina viestiä
+          lähetettäessä.
+        </p>
+
+        <p>
+          Ilmoituksia tehdessä ilmeni ongelmaksi se, että WebSocket-yhteyden kautta ei saa ilmoitusta käyttäjälle
+          uusista viesteissä, jos tämä on offline-tilassa, kun viesti lähetetään. Ratkaisin tämän, sillä, että luodaan
+          unread-message itemi aina viestiä lähetettäessä. Tämän avulla saadaan haettua pelkästään viestit joita
+          käyttäjä ei ole lukenut ja unreadmessage-itemi poistuu luettaessa.
+        </p>
+
+        <pre><code>
+// Viestin tallennus tietokantaan (single-table design)
+await doccli.send(
+      new PutCommand({
+        TableName: process.env.MAIN_TABLE, // main table from environmental variables
+        Item: {
+          PK: `room#${RoomId}`, 
+          SK: `message#${Timestamp}`, 
+          ConnectionId: connectionId,
+          SenderId, 
+          Content,
+          Timestamp, 
+          RoomId, 
+          SenderUsername,
+          ProfilePicture,
+        },
+      })
+    );
+
+// Filtteröidään chatroomissa paikalla olevat käyttäjät pois 
+for (const uid of allParticipants) {
+  if (activeConnections.includes(uid)) {
+    console.log(`Skipping notification for active user ${uid}`);
+    continue;
+  }
+
+  // notifikaation lähetys WebSocketin välityksellä
+  await sendNotification.handler({
+    userId: uid,
+    payload: {
+      type: 'newMessage',
+      roomId: RoomId,
+      senderId: SenderId,
+      content: Content,
+      timestamp: Timestamp,
+      senderUsername: SenderUsername,
+      profilePicture: ProfilePicture,
+    },
+    domainName: event.requestContext.domainName,
+    stage: event.requestContext.stage,
+  });
+}
+
+// Luodaan unread-message itemit viestiä lähetettäessä 
+    await Promise.all(
+      allParticipants.map((uid) =>
+        doccli.send(
+          new PutCommand({
+            TableName: process.env.MAIN_TABLE,
+            Item: {
+              PK: `USER#${uid}`, // partition key for user
+              SK: `UNREAD#${Timestamp}`, // sort key for unread message
+              MessageId: Timestamp,
+              RoomId,
+              SenderId,
+              SenderUsername,
+              Content,
+              ProfilePicture,
+              GSI1PK: `USER#${uid}`, //key for UnreadMessagesIndex
+              GSI1SK: `UNREAD#${Timestamp}`, // key for UnreadMessagesIndex
+              Timestamp,
+            },
+          })
+        )
+      )
+    );
+
+
+    </code></pre>
+      </details>
+      <details class="snippet">
+        <summary>Profiilikuvan uploadaaminen S3:een</summary>
+        <p>
+          Tässä koodipätkässä profiilikuvan uploadaaminen S3:een ja kuvan url:n tallentaminen DynamoDb-tietokantaan.
+          Upload-handleri käsittelee myös autentikoinnin varmistaen, että käyttäjä voi päivittää vain oman
+          profiilikuvan.
+        </p>
+        <p>
+          Otin tämän koodipätkän portfolioon, koska siinä käytetään monia eri AWS-palveluita yhteydessä
+          toisiinsa (S3+ DynamoDb + Cognito). Tästä konkreettisesti opin miten profiilikuvat kannattaa toteuttaa
+          yleisesti samankaltaisissa sosiaalisissa sovelluksissa.
+        </p>
+
+        <pre><code>
+// Kirjautuneen käyttäjän haku JWT-claimsista, varmistaa, että käyttäjä voi päivittää handlerillä vain oman profiilikuvan          
+const authUserId = event.requestContext?.authorizer?.jwt?.claims?.sub;
+
+// Base64-kuvan muuntaminen bufferiksi ja uploadaaminen S3-buckettiin
+const fileBuffer = Buffer.from(fileContentBase64.replace(/^data:.*;base64,/, ''), 'base64');
+const key = `profile-pictures/${authUserId}/${fileName}`;
+await s3.send(new PutObjectCommand({
+  Bucket: BUCKET,
+  Key: key,
+  Body: fileBuffer,
+  ContentType: fileType,
+  CacheControl: 'public, max-age=31536000, immutable',
+}));
+
+// URL profiilikuvan hakemiseen
+const url = `https://${BUCKET}.s3.${process.env.AWS_REGION}.amazonaws.com/${key}`;
+
+// Päivitetään käyttäjän profiilikuva DynamoDB:hen
+await doccli.send(new UpdateCommand({
+  TableName: MAIN_TABLE,
+  Key: { PK: `USER#${authUserId}`, SK: 'PROFILE' },
+  UpdateExpression: 'SET ProfilePicture = :url',
+  ExpressionAttributeValues: { ':url': url },
+}));
+
+
+  </code></pre>
+      </details>
+
+      <details class="snippet">
+        <summary>WebSocket-viestien lähetys ja stale-yhteyksien poisto</summary>
+        <p>
+          Tässä koodipätkässä viestien lähetys kaikille aktiivisille käyttäjille
+          WebSocketin kautta ja vanhat (stale) yhteydet poistetaan DynamoDB:stä.
+
+        </p>
+        <p>
+          Projektin alkuvaiheissa ongelmana oli ConnectionTablen täyttyminen vanhoilla yhteyksillä ja tämän ratkaisin
+          sillä, että stale yhteydet poistetaan errorin statusCoden ja nimen perusteella. Tämä parantaa sovelluksen
+          skaalautuvuutta, sekä vähentää turhaa resurssien kulutusta.
+        </p>
+
+        <pre><code>
+// Broadcast viesti kaikille huoneen yhteyksille
+await Promise.all(connections.map(async ({ connectionId, roomId }) => {
+  try {
+    await agmac.send(new PostToConnectionCommand({
+      ConnectionId: connectionId,
+      Data: JSON.stringify({ SenderId, Content, Timestamp, SenderUsername, ProfilePicture })
+    }));
+  } catch (err) {
+    // Poistetaan vanhat turhat yhteydet
+    if (err.statusCode === 410 || err.name === 'GoneException') {
+      await doccli.send(new DeleteCommand({
+        TableName: process.env.CONNECTION_DB_TABLE,
+        Key: { roomId, connectionId }
+      }));
+    } else {
+      console.error(`Send error for connection ${connectionId}:`, err);
+    }
+  }
+}));
+  </code></pre>
+      </details>
+
+      <details class="snippet">
+        <summary>Käyttäjien haku GSI:llä DynamoDB:stä</summary>
+        <p>
+          Tässä koodipätkässä käyttäjien haku nimen perusteella toteutettuna Global Secondary Indexillä (GSI).
+        </p>
+        <p>Halusin ottaa tämän mukaan portfolioon, koska ennen TC:tä en ollut tehnyt ollenkaan indeksointia
+          DynamoDB:llä. Tämä on yksi indeksi monien joukossa joita toteutin projektissa, joten projektin lopusssa
+          indeksointi oli jo hyvin hallussa.</p>
+
+        <pre><code>
+# GSI:n määrittely serverless.yml tiedostosta IaC-periaatteella
+MainTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:provider.environment.MAIN_TABLE}
+        AttributeDefinitions:
+          - AttributeName: PK
+            AttributeType: S
+          - AttributeName: SK
+            AttributeType: S
+          - AttributeName: GSI3PK # GSI:n HASH-key
+            AttributeType: S
+          - AttributeName: Username_Lower # GSI:n sort-keyn määrittely
+            AttributeType: S
+        KeySchema:
+          - AttributeName: PK
+            KeyType: HASH
+          - AttributeName: SK
+            KeyType: RANGE
+        GlobalSecondaryIndexes:
+          - IndexName: UsernameLowerIndex #indeksin määrittely
+            KeySchema:
+              - AttributeName: GSI3PK
+                KeyType: HASH
+              - AttributeName: Username_Lower
+                KeyType: RANGE
+            Projection:
+              ProjectionType: ALL
+
+  try {
+    // Haetaan käyttäjänimi URL-parametrista
+    const username = event.pathParameters?.username?.toLowerCase();
+    if (!username) return sendResponse(400, { message: 'username is required' });
+
+    // GSI-kysely DynamoDB:hen
+    const params = {
+      TableName: process.env.MAIN_TABLE,
+      IndexName: 'UsernameLowerIndex', // GSI username-haulle
+      KeyConditionExpression: 'GSI3PK = :pk AND begins_with(Username_Lower, :username)',
+      ExpressionAttributeValues: {
+        ':pk': 'USER',
+        ':username': username,
+      },
+    };
+
+    const data = await doccli.send(new QueryCommand(params));
+
+    if (!data.Items || data.Items.length === 0) {
+      return sendResponse(404, { message: 'No matching users found' });
+    }
+
+    // Palautetaan haetut käyttäjät
+    return sendResponse(200, { users: data.Items });
+
+  }
+  </code></pre>
+      </details>
+
+      <details class="snippet">
+        <summary>WebSocket-ilmoitusyhteys Angularissa</summary>
+        <p>
+          NotificationService hallitsee reaaliaikaisia ilmoituksia Angularissa.
+          Se muodostaa WebSocket-yhteyden backendille, käsittelee saapuvat viestit ja tarjoaa ne observable-streaminä
+          frontend-komponenteille.
+        </p>
+        <p>Otin tämän mukaan portfolioon, koska notifikaatioiden toteutttaminen ja yhdistäminen frontendiin oli yksi
+          projektin haastavimpia asioita.</p>
+
+        <pre><code>
+private socket: WebSocket | null = null;
+private notificationsSubject = new Subject<any>();
+private reconnectInterval = 3000;
+private pingInterval: any;
+
+// Observable komponenteille
+public notifications$ = this.notificationsSubject.asObservable();
+
+// Yhteyden alustus
+public initConnection() {
+  if (!this.token || !this.user || this.socket) return;
+
+  this.socket = new WebSocket(`${environment.WSS_URL}?Auth=${encodeURIComponent(this.token)}&type=notifications`);
+
+  this.socket.onopen = () => {
+    console.log('WebSocket connected');
+    // Ping, jotta yhteys pysyy aktiivisena
+    this.pingInterval = setInterval(() => {
+      if (this.socket?.readyState === WebSocket.OPEN) {
+        this.socket.send(JSON.stringify({ type: 'ping' }));
+      }
+    }, 5 * 60 * 1000);
+  };
+
+  // viestin saapuessa tallennetaan se subjectiin
+  this.socket.onmessage = (event) => {
+    try {
+      const data = JSON.parse(event.data);
+      console.log('Notification received:', data);
+      this.notificationsSubject.next(data);
+    } catch (err) {
+      console.error('Error parsing notification', err);
+    }
+  };
+
+  // yhteyden sammuessa reconnect
+  this.socket.onclose = () => {
+    console.log('WebSocket disconnected, reconnecting...');
+    this.socket = null;
+    clearInterval(this.pingInterval);
+    setTimeout(() => this.initConnection(), this.reconnectInterval);
+  };
+
+  this.socket.onerror = (err) => console.error('WebSocket error', err);
+}
+
+// Lähetys
+public send(payload: any) {
+  if (this.socket && this.socket.readyState === WebSocket.OPEN) {
+    this.socket.send(JSON.stringify(payload));
+  }
+}
+
+// Yhteyden sulkeminen
+public close() {
+  if (this.socket) {
+    this.socket.close();
+    this.socket = null;
+    clearInterval(this.pingInterval);
+  }
+}
+  </code></pre>
+      </details>
+
+
+
+
+
+    </section>
+
+    <section class="section">
+      <h2>TC:n jälkifiilikset</h2>
+      <p>
+        Tavoitteiden osalta koen, että saavutin suurimmat tavoitteeni TC:n osalta. Pääsin juuri sellaiseen rooliin
+        projektissa kuin halusinkin. Sain kehitettyä itsevarmuutta omista
+        taidoistani, kun onnistuin suunnittelemaan sovelluksen käyttötarkoitusta tukevan ja toimivan
+        pilviarkkitehtuurin. Tulevaisuudessa voin lähteä osaksi laajempiakin projekteja hyvällä itseluottamuksella, nyt
+        kun taidot on paremmin testattu. TC:n jälkeen koen, että vahvuuteni on Lambda-funktioiden käyttö ja ylipäätään
+        serverless-ratkaisut, koska niistä sai hyvin kokemusta projektin aikana.
+      </p>
+      <p>Tulevaisuudessa haluaisin jatkaa työskentelyä pilvipalveluiden parissa ja olla osana erilaisten arkkitehtuurien
+        suunnittelua ja toteutusta. Erityisesti haluaisin kokemusta laajemmin eri palveluiden käytöstä, jotta osaaminen
+        olisi mahdollisimman laajaa, opintojen aikana kuitenkin pääsee käyttämään eri palveluja aika rajatusti. </p>
+    </section>
+
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Email: 2ndlauri@gmail.com</p>
+      <p>
+        GitHub:
+        <a href="https://github.com/laurihalinen" target="_blank" rel="noopener">
+          github.com/laurihalinen
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Lauri Halinen</p>
+  </footer>
+</body>
+
+</html>
