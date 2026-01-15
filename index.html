@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lauri Halinen | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+  <header>
+    <img src="/assets/mugshot.png" alt="Photo of Lauri Halinen" class="profile-img">
+
+    <h1>Lauri Halinen</h1>
+    <p class="subtitle">IT Student | Full-Stack & Cloud Development</p>
+    <div class="links" aria-label="Social and contact links">
+      <a href="https://github.com/laurihalinen" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/lauri-halinen-514884337/" target="_blank"
+        rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:2ndlauri@gmail.com">Email</a>
+    </div>
+    <div class="skill-group">
+      <h4>Personal Interests</h4>
+      <p>Serverless architectures, Cloud Services, Scalable applications</p>
+    </div>
+    <div class="skills-container">
+      <div class="skill-group">
+        <h4>Cloud & Backend</h4>
+        <p>AWS (Lambda, DynamoDB, Cognito, SNS + more), Serverless Framework, MySQL, MongoDB</p>
+
+      </div>
+      <div class="skill-group">
+        <h4>Frontend & Web</h4>
+        <p>HTML, CSS, JavaScript, TypeScript, Angular, Svelte, Bootstrap, Tailwind</p>
+      </div>
+      <div class="skill-group">
+        <h4>Other / Tools</h4>
+        <p>Git, TensorFlow, WebSockets</p>
+      </div>
+    </div>
+
+
+  </header>
+
+  <main class="container">
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        Business Information Technology student with a broad set of IT skills, including cloud computing, web
+        development, and software architecture. I enjoy building scalable applications and exploring new technologies
+        that solve real-world problems. My main passions are cloud services and serverless architectures, and I’m always
+        excited to learn new things through hands-on projects.
+      </p>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+
+      <div class="project">
+
+
+        <img src="assets/synerraLogoBig.png" class="project-image" alt="Synerra application logo">
+
+        <p class="tech">Tech: Angular (TypeScript), Lambda, DynamoDB, Cognito, Serverless Framework</p>
+        <p>A social web application that connects gamers.</p>
+
+        <details>
+          <summary>More Info</summary>
+
+          <p>
+            Synerra allows gamers to create their profiles, find friends on their favorite games and chat together.
+          </p>
+
+          <p>
+            Synerra is a JAMK study project done in a group. I designed the serverless backend and integrated it with
+            the frontend.
+          </p>
+
+          <h4>Key Features:</h4>
+          <ul>
+            <li>User profiles with game preferences</li>
+            <li>Friend search and connections</li>
+            <li>Broad list of filtering options for users and games</li>
+            <li>Real-time chat and notifications between users</li>
+            <li>Scalable serverless backend</li>
+            <li>Online status for users</li>
+          </ul>
+
+          <h4 class="project-h4">Video Demo:</h4>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/AnGuJ2nvcVg" title="Synerra demo video" loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <h4 class="project-h4">Cloud Architecture:</h4>
+          <img src="assets/synerra_cloud.jpg" class="project-image" alt="Synerra cloud architecture diagram">
+
+          <h4 class="project-h4">Technologies Used:</h4>
+          <ul>
+            <li>WebSocket for real-time chat, notifications and online-status</li>
+            <li>AWS Lambda for serverless backend, allowing automatic scaling with user activity. </li>
+            <li>DynamoDB for unpredictable traffic and low latency reads for user and chat data.</li>
+            <li>AWS Cognito for authentication (includes Google login)</li>
+            <li> Serverless Framework was used to define and deploy infrastructure as code, making the backend
+              repeatable and
+              easier to modify.</li>
+            <li>CloudFront for frontend delivery</li>
+            <li>AWS S3 for frontend hosting and profile picture storage</li>
+
+          </ul>
+
+          <h4 class="project-h4">My Contributions:</h4>
+          <ul>
+            <li>Designed and implemented backend architecture</li>
+            <li>Configured AWS Lambda functions and DynamoDB tables</li>
+            <li>Handled user authentication and authorization with Cognito</li>
+            <li>Integrated backend with front-end API calls</li>
+          </ul>
+        </details>
+
+        <a href="https://github.com/jamktiko/Synerra" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="#" aria-disabled="true">Live Demo</a>
+      </div>
+      <div class="project">
+        <h3>Lambda Stats Notifier</h3>
+        <p class="tech">Tech: Lambda, DynamoDb, SNS, S3</p>
+        <p>Automated workflow for processing game statistics</p>
+
+        <details>
+          <summary>More Info</summary>
+          <p>Automated cloud infrastructure for uploading and processing CS2 player statistics. When a .csv file is
+            uploaded to S3, a Lambda function parses the data and stores it in DynamoDB. Another Lambda function
+            triggers an SNS notification that emails subscribers with the top 3 players based on win rate.</p>
+          <h4 class="project-h4">Cloud Architecture:</h4>
+          <img src="assets/statsnotifier.png" class="project-image" alt="Synerra cloud architecture diagram">
+          <h4 class="project-h4">Key Features:</h4>
+          <ul>
+            <li>Automated processing of uploaded CSV files containing player statistics</li>
+            <li>Serverless architecture using AWS Lambda for event-driven processing</li>
+            <li>Storage of processed stats in DynamoDB for fast and scalable access</li>
+            <li>Automatic email notifications to subscribers via SNS</li>
+            <li>Event-driven triggers from S3 file uploads</li>
+          </ul>
+
+
+
+
+
+        </details>
+
+        <a href="https://github.com/laurihalinen/lambda_stats_notifier" target="_blank"
+          rel="noopener noreferrer">GitHub</a>
+
+      </div>
+
+      <div class="project">
+        <h3>Sleep Requirement Calculator</h3>
+        <p class="tech">Tech: TensorFlow, JavaScript</p>
+        <p>Calculates sleep time requirement with TensorFlow.</p>
+
+        <details>
+          <summary>More Info</summary>
+          <p>The tensorflow model is trained with a dataset which includes values that affect sleep time requirement
+            like: caffeine intake, exercise time, worktime etc.</p>
+
+          <h4 class="project-h4">Video Demo:</h4>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/bAlF8VL7W6o" title="Sleep requirement calculator demo"
+              loading="lazy" allowfullscreen>
+            </iframe>
+          </div>
+        </details>
+
+        <a href="https://github.com/laurihalinen/sleep-requirement-calculator" target="_blank"
+          rel="noopener noreferrer">GitHub</a>
+      </div>
+
+      <div class="project">
+        <h3>Rock Paper Scissors - WebSocket game</h3>
+        <p class="tech">Tech: WebSocket, JavaScript</p>
+        <p>Classic Rock-Paper-Scissors game done with WebSocket for real-time events.</p>
+
+        <details>
+          <summary>More Info</summary>
+          <h4 class="project-h4">Key Features:</h4>
+          <ul>
+            <li>WebSocket for real-time events</li>
+            <li>Automated user-name generation with Moniker</li>
+          </ul>
+          <h4 class="project-h4">Video Demo:</h4>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/oVFJsMAOIC0" title="WebSocket Rock Paper Scissors demo"
+              loading="lazy" allowfullscreen>
+            </iframe>
+          </div>
+        </details>
+
+        <a href="https://github.com/laurihalinen/ws-rps" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+
+      <div class="project">
+        <h3>Age Comparison with Rekognition</h3>
+        <p class="tech">Tech: AWS Rekognition, JavaScript</p>
+        <p>This project compares ages of 2 people in different images with AWS Rekognition. It analyzes both pictures
+          and tells the age of both people and which person is older.</p>
+
+        <details>
+          <summary>More Info</summary>
+          <h4 class="project-h4">Key Features:</h4>
+          <ul>
+            <li>Person age analysis from image with AWS Rekognition</li>
+            <li>Age comparison</li>
+          </ul>
+          <h4 class="project-h4">Video Demo (in Finnish):</h4>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/kIR5s2SMmGo" title="Age comparison Rekognition demo"
+              loading="lazy" allowfullscreen>
+            </iframe>
+          </div>
+        </details>
+
+        <a href="https://github.com/laurihalinen/age-comparison-rekognition" target="_blank"
+          rel="noopener noreferrer">GitHub</a>
+      </div>
+
+      <div class="project">
+        <h3>CS2 Item Gallery</h3>
+        <p class="tech">Tech: Angular, Bootstrap, CSS</p>
+        <p>CS2 virtual item gallery with filtering, adding to favorites, etc.</p>
+        <details>
+          <summary>More Info</summary>
+          <p>This project showcases virtual CS2 items. Users can filter by name, type, rarity, and add items to
+            favorites. The
+            gallery is built with Angular and styled using Bootstrap.</p>
+          <h4>Key Features</h4>
+          <ul>
+            <li>Dynamic filtering and search</li>
+            <li>Favorites system</li>
+            <li>Responsive layout</li>
+          </ul>
+
+          <h4 class="project-h4">Video Demo:</h4>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/WkW0Vu7i-pQ" title="CS2 item gallery demo" loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </details>
+
+        <a href="https://github.com/laurihalinen/cs2itemsangular" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: <a href="mailto:2ndlauri@gmail.com">2ndlauri@gmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/lauri-halinen-514884337/">linkedin.com/in/lauri-halinen</a>
+        </li>
+        <li>GitHub: <a href="https://github.com/laurihalinen">github.com/laurihalinen</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © Lauri Halinen
+  </footer>
+
+</body>
+
+</html>
