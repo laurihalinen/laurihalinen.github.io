@@ -59,7 +59,62 @@
 
     <section>
       <h2>Projects</h2>
+      <div class="project">
+        <h3>Thesis (Gymnastics Referee Training App - Proof of Concept)</h3>
+        <p class="tech">Tech: Lambda, API Gateway, DynamoDb, S3, Cognito</p>
+        <p>Training application for gymnastics referees.</p>
 
+        <details>
+          <summary>More Info</summary>
+          <p>Abstract from Thesis: In recent years, sports and refereeing have increasingly been supported by various
+            technological solutions.
+            The importance of high-quality judging is particularly emphasized in sports where officiating includes
+            subjective elements, such as gymnastics. In such sports, the competence of judges and the training they
+            receive play a key role in ensuring the fairness and equality of competitions. The utilization of digital
+            solutions
+            in training offers opportunities to judges’ education independently regardless of time and location.</p>
+          <p>The commissioning organization for the work was Jyväskylä University of Applied Sciences, which sought to
+            investigate the feasibility of a judges’ training application through a proof-of-concept solution. The work
+            was carried out as a functional thesis, with the focus on the design and implementation of a concrete
+            software solution. The objective was to develop a cost-efficient application capable of demonstrating the
+            viability of the concept and allowing easy expansion in the future. The core functionalities of the
+            application included scoring gymnastics performances and comparing the users’ own scores to those of the
+            official
+            judges. The application was implemented using serverless technology on the Amazon Web Services cloud
+            platform.</p>
+          <p>As a result, a serverless-based cloud application was designed and developed, enabling end users to
+            evaluate
+            recorded gymnastics performances and compare their own scores with official judges’ scores. The application
+            allows the commissioning organization to assess the usefulness, feasibility, and further development of the
+            proposed concept.</p>
+          <p>It was concluded that a serverless architecture was a suitable choice for implementing the proof-of-concept
+            application. In particular, the simple and modular structure based on AWS Lambda functions enabled a
+            clear and easily manageable solution and created favorable conditions for future development without major
+            changes to the existing architecture.
+          </p>
+          <h4 class="project-h4">Cloud Architecture:</h4>
+          <img src="assets/erotuomarikoulutussovellus_arkkitehtuuri.jpg" class="project-image"
+            alt="Thesis cloud architecture diagram">
+          <h4 class="project-h4">Key Features:</h4>
+          <ul>
+            <li>Cognito signup and login</li>
+            <li>Upload videos to S3 with presigned url</li>
+            <li>Lambda functions for scoring gymnastics videos</li>
+            <li>User and scoring data stored in DynamoDB with single-table-design</li>
+            <li>Score comparison in frontend</li>
+          </ul>
+
+
+
+
+
+        </details>
+
+        <a href="https://github.com/laurihalinen/referee-training-app" target="_blank"
+          rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.theseus.fi/handle/10024/925496" target="_blank" rel="noopener noreferrer">Full Thesis</a>
+
+      </div>
       <div class="project">
 
 
